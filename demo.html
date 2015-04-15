@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>seamless</title>
+	<script type="text/javascript" src="jquery/1.11.1/jquery.min.js"></script>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		#wrap{
+			width: 240px;
+			height: 50px;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+			border: 1px solid #ccc;
+			zoom: 1;
+		}
+		.slider{
+			width: 240px;
+			zoom: 1;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			left:0px;
+		}
+		.slider li{
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			background-color: #00c;
+			font-size: 14px;
+			color: #fff;
+			margin: 0 10px 0 0;
+			float: left;
+			list-style: none;
+		}
+		input{
+			display: block;
+			width: 100px;
+			margin: auto;
+			padding: 10px;
+		}
+	</style>
+</head>
+<script type="text/javascript" src="jquery-seamless.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".slider").bearSlider({
+			lBtn:"#btnL",
+			rBtn:"#btnR",
+			delay:300,
+			perItem:3
+		});
+	})
+</script>
+<body>
+	<h3>js利用克隆节点的方法来实现无缝滚动</h3>
+	<div id="wrap">
+		<ul class="slider">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+	</div>
+	<input type="button" id="btnL" value="左切">
+	<input type="button" id="btnR" value="右切">
+</body>
+</html>
